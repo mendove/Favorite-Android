@@ -1,0 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        okHttpVersion = '4.10.0'
+        retrofitVersion = '2.8.1'
+        lifecycleVersion = '2.4.1'
+
+        // 基于 liveData 的事件总线 https://github.com/JeremyLiao/LiveEventBus
+        liveEventBusVersion = '1.8.0'
+
+        // 微信 MMkv https://github.com/Tencent/MMKV/blob/master/README_CN.md
+        mmkvVersion = '1.2.9'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.1' apply false
+    id 'com.android.library' version '7.4.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+}
