@@ -10,6 +10,9 @@ buildscript {
 
         // 微信 MMkv https://github.com/Tencent/MMKV/blob/master/README_CN.md
         mmkvVersion = '1.2.9'
+
+        // 第三方日志管理库
+        loggerVersion = "2.2.0"
     }
 }
 

@@ -3,6 +3,7 @@ package com.example.favorite_android
 import android.app.Application
 import android.content.Intent
 import com.example.favorite_android.service.LocationUpdateService
+import com.example.favorite_android.utils.log.LoggerImpl
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.tencent.mmkv.MMKV
 
@@ -17,6 +18,8 @@ class MyApplication : Application() {
   override fun onCreate() {
     super.onCreate()
 
+    mInstance = this
+
     // 启动高德定位服务
     startGDLocationService()
 
@@ -25,6 +28,16 @@ class MyApplication : Application() {
 
     // 初始化 mmkv
     initMMKV()
+
+    // 初始化日志
+    initLogger()
+  }
+
+  /**
+   * 初始化日志
+   */
+  private fun initLogger() {
+    LoggerImpl.getInstance().init(true,"Favorite")
   }
 
   /**
@@ -51,4 +64,19 @@ class MyApplication : Application() {
     MMKV.initialize(this)
   }
 
+  // 是否是 Debug 模式
+  val isDebug = BuildConfig.DEBUG
+
+  companion object {
+    private lateinit var mInstance: MyApplication
+
+    @JvmStatic
+    fun instance(): MyApplication = mInstance
+  }
+
 }
+
+/**
+ * 获取全局的 application
+ */
+fun getDefaultApp() = MyApplication.instance()

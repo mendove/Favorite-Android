@@ -70,4 +70,7 @@ dependencies {
 
     // 微信 MMKV 组件
     implementation "com.tencent:mmkv-static:$mmkvVersion"
+
+    // 第三方日志管理库
+    implementation "com.orhanobut:logger:$loggerVersion"
 }
