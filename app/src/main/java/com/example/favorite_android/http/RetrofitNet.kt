@@ -42,7 +42,7 @@ class RetrofitNet private constructor() {
   }
 
   init {
-    val okHttpClient = OkHttpClient.Builder().build()
+    val okHttpClient = OkHttpUtil.getInstance().okHttpClient
     retrofit = Retrofit.Builder()
       .client(okHttpClient)
       .baseUrl("http://" + Constants.DEFAULT_DOMAIN_NAME)
