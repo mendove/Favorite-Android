@@ -12,9 +12,9 @@ class SPOtherUtils {
 
   companion object{
 
-    const val PASSWORD_ADMIN = "123456"
+    private const val PASSWORD_ADMIN = "123456"
 
-    const val KEY_PASSWORD = "password"
+    private const val KEY_PASSWORD = "password"
 
     var password
       get() = SPUtils.getString(KEY_PASSWORD, PASSWORD_ADMIN)

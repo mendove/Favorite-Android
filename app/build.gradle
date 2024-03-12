@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    // Kotlin Symbol Processing (KSP) 插件，用于进行 Kotlin 注解处理。
+    // 与传统的 kapt 注解处理器不同，KSP 提供更快的编译速度和更好的性能。
+    id 'com.google.devtools.ksp' version '1.8.10-1.0.9'
 }
 
 android {
@@ -15,6 +18,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+
+        }
     }
 
     // 开启 viewBinding 绑定
@@ -73,4 +82,11 @@ dependencies {
 
     // 第三方日志管理库
     implementation "com.orhanobut:logger:$loggerVersion"
+
+    // glide 图片加载库
+
+
+    // room 数据库
+    // implementation "androidx.room:room-runtime:$roomVersion"
+    // kapt "androidx.room:room-compiler:$roomVersion"
 }

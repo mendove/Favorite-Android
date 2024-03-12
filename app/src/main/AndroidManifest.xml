@@ -4,6 +4,15 @@
 
   <uses-permission android:name="android.permission.INTERNET" />
 
+  <!--  请求读取外部存储器上的文件的权限  -->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+  <!-- 检测设备当前网络状态的权限 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+  <!-- Android 10 以上 权限声明不再提供对外部存储器的写入权限。 -->
+  <!--  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+
   <application
     android:name=".MyApplication"
     android:allowBackup="true"

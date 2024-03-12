@@ -1,6 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    // 自定义参数
     ext {
+        // 网络请求框架
         okHttpVersion = '4.10.0'
         retrofitVersion = '2.8.1'
         lifecycleVersion = '2.4.1'
@@ -13,11 +15,31 @@ buildscript {
 
         // 第三方日志管理库
         loggerVersion = "2.2.0"
+
+        // room 数据库
+        roomVersion = '2.5.1'
+
+        // glide 图片加载库
+        glideVersion = '4.15.1'
+    }
+
+    // 配置工程所需仓库，依赖项
+    repositories {
+        // 谷歌仓库
+        google()
+        // maven 中心仓库
+        mavenCentral()
     }
 }
 
+// plugins {} 代码块之前只允许包含 buildscript {}、pluginManagement {} 和其他插件脚本块，不允许包含其他语句。
 plugins {
     id 'com.android.application' version '7.4.1' apply false
     id 'com.android.library' version '7.4.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+}
+
+// 事务，清除 build 目录缓存
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
