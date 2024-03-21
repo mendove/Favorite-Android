@@ -14,5 +14,8 @@
   <string name="lunch_singleTop">栈顶复用</string>
   <string name="lunch_singleTask">栈内复用</string>
   <string name="lunch_singleInstance">全局单例模式</string>
+
+  <string name="function_activity">功能 Activity</string>
+  <string name="handle_test">Handle Test</string>
   
 </resources>

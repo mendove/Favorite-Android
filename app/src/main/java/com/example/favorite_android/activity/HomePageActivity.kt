@@ -1,10 +1,8 @@
 package com.example.favorite_android.activity
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
+import com.example.favorite_android.MainActivity
 import com.example.favorite_android.activity.base.BaseActivity
 import com.example.favorite_android.activity.lunchmode.LunchModeActivity
 import com.example.favorite_android.databinding.ActivityHomePageBinding
@@ -26,6 +24,10 @@ class HomePageActivity : BaseActivity<ActivityHomePageBinding>(ActivityHomePageB
     mViewBinding.run {
       btActivityLunch.setOnClickListener {
         val intent = Intent(this@HomePageActivity,LunchModeActivity::class.java)
+        startActivity(intent)
+      }
+      btFunction.setOnClickListener {
+        val intent = Intent(this@HomePageActivity,MainActivity::class.java)
         startActivity(intent)
       }
     }
