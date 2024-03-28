@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_home_mode"
-    app:startDestination="@id/homePageFragment">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/nav_home_mode"
+  app:startDestination="@id/homePageFragment">
 
-    <fragment
-        android:id="@+id/homePageFragment"
-        android:name="com.example.favorite_android.fragment.HomePageFragment"
-        android:label="HomePageFragment">
+  <fragment
+    android:id="@+id/homePageFragment"
+    android:name="com.example.favorite_android.fragment.HomePageFragment"
+    android:label="HomePageFragment">
 
-        <action
-            android:id="@+id/action_homePageFragment_to_httpHomePageFragment"
-            app:destination="@+id/httpHomePageFragment"/>
+    <action
+      android:id="@+id/action_homePageFragment_to_httpHomePageFragment"
+      app:destination="@+id/httpHomePageFragment" />
 
-        <action
-            android:id="@+id/action_homePageFragment_to_testKeyboardFragment"
-            app:destination="@id/testKeyboardFragment"/>
+    <action
+      android:id="@+id/action_homePageFragment_to_testKeyboardFragment"
+      app:destination="@id/testKeyboardFragment" />
 
-    </fragment>
+    <action
+      android:id="@+id/action_homePageFragment_to_handleTestFragment"
+      app:destination="@id/handleTestFragment" />
 
-    <fragment
-        android:id="@+id/httpHomePageFragment"
-        android:name="com.example.favorite_android.fragment.http.HttpHomePageFragment"
-        android:label="HttpHomePageFragment">
+  </fragment>
 
-
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/testKeyboardFragment"
-        android:name="com.example.favorite_android.fragment.test.TestKeyboardFragment"
-        android:label="TestKeyboardFragment">
+  <fragment
+    android:id="@+id/httpHomePageFragment"
+    android:name="com.example.favorite_android.fragment.http.HttpHomePageFragment"
+    android:label="HttpHomePageFragment">
 
 
-    </fragment>
+  </fragment>
+
+  <fragment
+    android:id="@+id/testKeyboardFragment"
+    android:name="com.example.favorite_android.fragment.test.TestKeyboardFragment"
+    android:label="TestKeyboardFragment">
+
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/handleTestFragment"
+    android:name="com.example.favorite_android.fragment.HandleTestFragment"
+    android:label="HandleTestFragment"/>
 
 </navigation>

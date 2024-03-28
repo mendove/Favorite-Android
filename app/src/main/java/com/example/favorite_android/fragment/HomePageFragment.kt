@@ -27,7 +27,7 @@ class HomePageFragment : BaseVBFragment<FragmentHomePageBinding>(FragmentHomePag
     }
 
     binding.btHandleTest.setOnClickListener {
-      findNavController().navigate(R.id.action_homePageFragment_to_httpHomePageFragment)
+      findNavController().navigate(R.id.action_homePageFragment_to_handleTestFragment)
     }
 
   }

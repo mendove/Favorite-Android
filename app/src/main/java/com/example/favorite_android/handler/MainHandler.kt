@@ -13,8 +13,14 @@ import com.jeremyliao.liveeventbus.utils.ThreadUtils.isMainThread
  */
 class MainHandler : Handler(Looper.getMainLooper()) {
 
+  private var mHandleMessage = arrayListOf<IHandleMessage>()
+
   override fun handleMessage(msg: Message) {
-    super.handleMessage(msg)
+    mHandleMessage.forEach {
+      if (!it.handleMessage(msg)) {
+        return
+      }
+    }
   }
 
   /**
@@ -63,6 +69,13 @@ class MainHandler : Handler(Looper.getMainLooper()) {
     } else {
       sendMessageDelayed(msg, delayMillis)
     }
+  }
+
+  /**
+   * 添加 HandleMessage 回调
+   */
+  fun addHandleMessageCallback(handlerMessage: IHandleMessage) {
+    mHandleMessage.add(handlerMessage)
   }
 
   companion object {
