@@ -27,8 +27,8 @@ android {
     }
 
     // 开启 viewBinding 绑定
-    viewBinding{
-        enabled =true
+    viewBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -58,7 +58,7 @@ dependencies {
 
     // Kotlin Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.1")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.1"){
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.1") {
     }
 
     // okhttp
@@ -85,8 +85,10 @@ dependencies {
 
     // glide 图片加载库
 
-
     // room 数据库
-    // implementation "androidx.room:room-runtime:$roomVersion"
-    // kapt "androidx.room:room-compiler:$roomVersion"
+    // ksp 是指 Kotlin Symbol Processing 的缩写，是一种用于 Kotlin 的元数据处理框架
+    // TODO 使用 ksp 时采用 kotlin 1.9.0 构建脚本报错，改成 1.8.10 后正常，需要进一步验证冲突问题
+    implementation "androidx.room:room-runtime:$roomVersion"
+    ksp "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
 }

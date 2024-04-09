@@ -21,6 +21,10 @@
       android:id="@+id/action_homePageFragment_to_handleTestFragment"
       app:destination="@id/handleTestFragment" />
 
+    <action
+      android:id="@+id/action_homePageFragment_to_roomTestFragment"
+      app:destination="@id/roomTestFragment" />
+
   </fragment>
 
   <fragment
@@ -43,5 +47,10 @@
     android:id="@+id/handleTestFragment"
     android:name="com.example.favorite_android.fragment.HandleTestFragment"
     android:label="HandleTestFragment"/>
+
+  <fragment
+    android:id="@+id/roomTestFragment"
+    android:name="com.example.favorite_android.fragment.RoomTestFragment"
+    android:label="RoomTestFragment"/>
 
 </navigation>

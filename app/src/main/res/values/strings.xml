@@ -6,7 +6,10 @@
   <string name="get_weather">获取天气</string>
   <string name="get_location">获取定位信息</string>
   <string name="login">登陆</string>
+  <string name="user_name">用户名</string>
   <string name="password">密码</string>
+  <string name="add">添加</string>
+  <string name="select">查询</string>
   
   <!-- 首页菜单 -->
   <string name="activity_launch">Activity启动模式</string>
@@ -17,5 +20,6 @@
 
   <string name="function_activity">功能 Activity</string>
   <string name="handle_test">Handle Test</string>
+  <string name="room_test">Room Test</string>
   
 </resources>

@@ -30,6 +30,10 @@ class HomePageFragment : BaseVBFragment<FragmentHomePageBinding>(FragmentHomePag
       findNavController().navigate(R.id.action_homePageFragment_to_handleTestFragment)
     }
 
+    binding.btRoomTest.setOnClickListener {
+      findNavController().navigate(R.id.action_homePageFragment_to_roomTestFragment)
+    }
+
   }
 
 }

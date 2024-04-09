@@ -7,6 +7,8 @@ buildscript {
         retrofitVersion = '2.8.1'
         lifecycleVersion = '2.4.1'
 
+        kotlinVersion = '1.8.10'
+
         // 基于 liveData 的事件总线 https://github.com/JeremyLiao/LiveEventBus
         liveEventBusVersion = '1.8.0'
 
@@ -30,13 +32,19 @@ buildscript {
         // maven 中心仓库
         mavenCentral()
     }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
 }
 
+
 // plugins {} 代码块之前只允许包含 buildscript {}、pluginManagement {} 和其他插件脚本块，不允许包含其他语句。
+// plugins { ... }：这是 Gradle 构建脚本中用于声明和配置插件的部分。
 plugins {
     id 'com.android.application' version '7.4.1' apply false
     id 'com.android.library' version '7.4.1' apply false
-    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    // id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
 }
 
 // 事务，清除 build 目录缓存

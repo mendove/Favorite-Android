@@ -19,7 +19,10 @@ class Constants {
     // 默认的 SP 文件
     const val DEFAULT_SP_NAME = "favorite_name"
 
+    // ---------------------- 数据库相关 ----------------------------------
 
+    // 人员信息的表名
+    const val TABLE_NAME_ROOM_TEST = "room_test"
   }
 
 }
