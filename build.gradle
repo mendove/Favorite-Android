@@ -23,6 +23,9 @@ buildscript {
 
         // glide 图片加载库
         glideVersion = '4.15.1'
+
+        // kotlin 协程库
+        kotlinCoroutinesVersion = "1.6.4"
     }
 
     // 配置工程所需仓库，依赖项

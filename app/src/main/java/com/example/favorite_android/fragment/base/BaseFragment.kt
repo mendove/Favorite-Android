@@ -4,6 +4,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.example.favorite_android.utils.log.logInfo
 import java.lang.IllegalStateException
 
 /**
@@ -26,7 +27,7 @@ open class BaseFragment : Fragment() {
     try {
       navController = findNavController()
     } catch (e: IllegalStateException) {
-
+      logInfo("onBackPressed ---- $e")
     }
 
     if (navController?.navigateUp() != true) {

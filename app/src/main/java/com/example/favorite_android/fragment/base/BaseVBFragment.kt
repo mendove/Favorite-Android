@@ -15,7 +15,7 @@ import com.example.favorite_android.helper.HandleTestHelper
  * Author: Shadow
  * Email: 2364306586@qq.com
  */
-open class BaseVBFragment<VB : ViewBinding,>(private val vbInflate: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> VB) : BaseFragment(){
+open class BaseVBFragment<VB : ViewBinding>(private val vbInflate: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> VB) : BaseFragment(){
 
     protected var mBinding: VB? = null
 

@@ -25,6 +25,9 @@
       android:id="@+id/action_homePageFragment_to_roomTestFragment"
       app:destination="@id/roomTestFragment" />
 
+    <action
+      android:id="@+id/action_homePageFragment_to_coroutineTestFragment"
+      app:destination="@id/coroutineTestFragment" />
   </fragment>
 
   <fragment
@@ -52,5 +55,10 @@
     android:id="@+id/roomTestFragment"
     android:name="com.example.favorite_android.fragment.RoomTestFragment"
     android:label="RoomTestFragment"/>
+
+  <fragment
+    android:id="@+id/coroutineTestFragment"
+    android:name="com.example.favorite_android.fragment.CoroutineTestFragment"
+    android:label="CoroutineTestFragment" />
 
 </navigation>
