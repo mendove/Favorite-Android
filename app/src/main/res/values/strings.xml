@@ -22,5 +22,5 @@
   <string name="handle_test">Handle Test</string>
   <string name="room_test">Room Test</string>
   <string name="coroutine_test">协程示例</string>
-  
+  <string name="lambda_test">Lambda 示例</string>
 </resources>
